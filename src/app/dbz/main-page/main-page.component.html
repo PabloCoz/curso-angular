@@ -6,8 +6,10 @@
 
   <div class="my-5">
     <form (ngSubmit)="agregar()">
-      <input type="text" name="nombre" [(ngModel)]="personaje.nombre" class="block border mt-3" placeholder="Ingrese nombre de producto">
-      <input type="text" name="poder" [(ngModel)]="personaje.poder" class="block border mt-3" placeholder="Ingrese precio">
+      <input type="text" name="nombre" [(ngModel)]="personaje.nombre" class="block border mt-3"
+        placeholder="Ingrese nombre de producto">
+      <input type="text" name="poder" [(ngModel)]="personaje.poder" class="block border mt-3"
+        placeholder="Ingrese precio">
       <button type="submit" class="bg-slate-200">
         Agregar
       </button>
@@ -34,24 +36,7 @@
             </th>
           </tr>
         </thead>
-        <tbody *ngFor="let personaje of datos ">
-          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {{personaje.nombre}}
-            </th>
-            <td class="px-6 py-4">
-              {{personaje.poder}}
-            </td>
-            <td class="px-6 py-4">
-              <button class="bg-red-500 text-white p-3 rounded-lg">
-                Borrar
-              </button>
-            </td>
-            <td class="px-6 py-4">
-              $2999
-            </td>
-          </tr>
-        </tbody>
+        <app-personaje [datos]="datos"></app-personaje>
       </table>
     </div>
 
