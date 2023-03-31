@@ -5,40 +5,10 @@
   </div>
 
   <div class="my-5">
-    <form (ngSubmit)="agregar()">
-      <input type="text" name="nombre" [(ngModel)]="personaje.nombre" class="block border mt-3"
-        placeholder="Ingrese nombre de producto">
-      <input type="text" name="poder" [(ngModel)]="personaje.poder" class="block border mt-3"
-        placeholder="Ingrese precio">
-      <button type="submit" class="bg-slate-200">
-        Agregar
-      </button>
-    </form>
+    <app-agrega-personaje></app-agrega-personaje>
   </div>
 
   <div class="mt-5">
-
-    <div class="relative overflow-x-auto">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" class="px-6 py-3">
-              Product name
-            </th>
-            <th scope="col" class="px-6 py-3">
-              Color
-            </th>
-            <th scope="col" class="px-6 py-3">
-              Category
-            </th>
-            <th scope="col" class="px-6 py-3">
-              Price
-            </th>
-          </tr>
-        </thead>
-        <app-personaje [datos]="datos"></app-personaje>
-      </table>
-    </div>
-
+    <app-personaje></app-personaje>
   </div>
 </div>
